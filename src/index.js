@@ -20,7 +20,7 @@ const server = express();
 // return to pass json 
 server.use(express.json());
 server.use(cookieParser());
-server.use(cors({ origin: ["http://localhost:3000", "http://127.0.0.1:3000"], credentials: true }));
+server.use(cors({ origin: ["http://localhost:3000" ||  "http://127.0.0.1:3000"|| "https://nestroo-e-frontend.vercel.app/"], credentials: true }));
 server.use("/api/category", categoryRouter);
 server.use("/api/room-type", roomRouter);
 server.use("/api/product", productRouter);
